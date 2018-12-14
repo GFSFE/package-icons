@@ -41,7 +41,7 @@
 		}
 
 	</style>
-	<link rel="stylesheet" type="text/css" href="../dist/icon.css">
+	<link rel="stylesheet" type="text/css" href="./icon.css">
 </head>
 <body>
 	<div class="container">
