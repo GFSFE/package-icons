@@ -14,7 +14,7 @@ package-icons is a command line tool to package svg icons into font file with us
 **运行后，我们得到的东西有：**
 
     1. eot/svg/ttf/woff 字体文件
-    2. css文件
+    2. css文件，所有的图标class名会根据svg文件名生成
     3. 预览用的html文件
 
 理论上，配合脚本，这些woff和css可以直接在项目中使用，显示漂亮的图标。    
