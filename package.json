@@ -9,10 +9,21 @@
   "bin": {
     "package-icons": "./index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GFSFE/package-icons.git"
+  },
+  // "contributors": [{
+  //   "name": "",
+  //   "email": "",
+  //   "url": ""
+  // }]
   "keywords": [
     "Nodejs",
     "package",
-    "icon"
+    "icon",
+    "svg",
+    "fonts"
   ],
   "author": "Jay Lu",
   "license": "ISC",
