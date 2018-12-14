@@ -9,7 +9,7 @@ package-icons is a command line tool to package svg icons into font file with us
 使用这个小工具，我们需要的东西有：
 
     1. 一个装满svg的文件夹
-    2. 每个svg文件都做好英语命名，例如: action-search.svg, action-cancel.svg
+    2. 每个svg文件都做好英语命名，例如: action-search.svg, action-cancel.svg
         
 运行后，我们得到的东西有：
 
