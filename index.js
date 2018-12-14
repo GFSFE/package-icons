@@ -6,8 +6,6 @@ const Packager = require('./libs/packager')
 
 function validateAndGetOptions(args) {
 
-    console.log(args['class-prefix']);
-
     if (!args['source'] || !args['target']){
         console.log('usage: please add required arguments [source] and [target], eg. package-icons --source ./svgs --target ./dist')
         console.log('arguments:');
