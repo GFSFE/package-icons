@@ -59,6 +59,10 @@ function renderHtml(options, htmlPreview) {
 	console.log('[step]', 'generate preview.html done.')
 }
 
+function ascending(a, b) {
+	return path.basename(a).localeCompare(path.basename(b))
+}
+
 class Packager {
 
 	constructor({
@@ -130,11 +134,13 @@ class Packager {
 
 		mkdirIfNotExist(options.targetPath)
 
+		let sortedFile = getFiles(options.sourcePath).sort(ascending)
+
 		const {
 			font,
 			cssContentList,
 			htmlContentList
-		} = await this.createFontFromFiles(options, getFiles(options.sourcePath))
+		} = await this.createFontFromFiles(options, sortedFile)
 
 		font.output({
 			path: path.join(options.targetPath, options.fontFileName)
