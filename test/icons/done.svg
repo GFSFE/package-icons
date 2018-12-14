@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard Copy 14</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M23.9520795,4.97970586 C25.0678571,3.75487679 26.9652938,3.66647314 28.1901229,4.78225078 C29.4149519,5.89802843 29.5033556,7.79546507 28.3875779,9.02029414 L13.8121219,25.0202941 C12.6944024,26.2472548 10.7928344,26.3335065 9.5686277,25.2127714 L1.67166673,17.9832724 C0.449586821,16.8644844 0.365852219,14.9668359 1.48464026,13.744756 C2.60342831,12.5226761 4.50107673,12.4389415 5.72315664,13.5577296 L11.4018948,18.756493 L23.9520795,4.97970586 Z" id="path-1"></path>
+    </defs>
+    <g id="Artboard-Copy-14" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Mask" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+    </g>
+</svg>
