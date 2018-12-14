@@ -1,6 +1,6 @@
 {
   "name": "package-icons",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "command line tool to package svg icons into font file with useable css",
   "main": "index.js",
   "scripts": {
@@ -13,11 +13,6 @@
     "type": "git",
     "url": "git+https://github.com/GFSFE/package-icons.git"
   },
-  // "contributors": [{
-  //   "name": "",
-  //   "email": "",
-  //   "url": ""
-  // }]
   "keywords": [
     "Nodejs",
     "package",
