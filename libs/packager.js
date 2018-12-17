@@ -41,7 +41,7 @@ function dumpCssMap(cssMap) {
 	const allKeys = Object.keys(cssMap)
 	console.log('=============================================')
 	for (let key of allKeys) {
-		console.log(`${key} \t\t ${cssMap[key]}`)
+		console.log(`${key} \t\t\t\t ${cssMap[key]}`)
 	}
 	console.log('=============================================')
 }
