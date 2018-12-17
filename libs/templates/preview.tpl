@@ -12,7 +12,8 @@
 		.container {
 			margin: 50px auto;
 			max-width: 1120px;
-			overflow: hidden;
+			display: flex;
+			flex-wrap: wrap;
 		}
 		.item-wrapper {
 			width: 118px;
