@@ -59,10 +59,11 @@ function renderCss(options, cssClass) {
 	console.log('[step]', 'generate icon.css done.')
 }
 
-function renderCssNames(options, cssClass) {
-	const output = path.join(options.targetPath, 'icon-name.txt')
-	fs.writeFileSync(output, cssClass.join('\n\n'))
-	console.log('[step]', 'generate icon-name.txt done.')
+function renderMetaJson(options, cssMap) {
+	const output = path.join(options.targetPath, 'icon-meta.json')
+	const content = JSON.stringify(cssMap, null, 4)
+	fs.writeFileSync(output, content)
+	console.log('[step]', 'generate icon-meta.json done.')
 }
 
 function renderHtml(options, htmlPreview) {
@@ -167,7 +168,7 @@ class Packager {
 
 		dumpCssMap(cssMap)
 		renderCss(options, cssContentList)
-		renderCssNames(options, cssContentList)
+		renderMetaJson(options, cssMap)
 		renderHtml(options, htmlContentList)
 
 		console.log('[step]', 'transfer svg to font successfully.')
