@@ -59,4 +59,21 @@ npx package-icons
 
     ![Alt text](./pictures/target.png?raw=true)
 
-    You can double click the preview.html to see the result.
+4. You can double click the preview.html to see the result.
+
+    ![Alt text](./pictures/preview.png?raw=true)
+
+5. There is a icon-meta.json which contain the meta information of the class name and font value, you can use it to generate project final css with your predefined template.
+
+    ```json
+    {
+        "w-icon-add": "e001",
+        "w-icon-close": "e002",
+        "w-icon-delete": "e003",
+        "w-icon-done": "e004",
+        "w-icon-left": "e005",
+        "w-icon-right": "e006",
+        "w-icon-share": "e007",
+        "w-icon-win": "e008"
+    }
+    ```
