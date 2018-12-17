@@ -37,6 +37,15 @@ async function getSvgFileData(file, isMinify) {
 	return data;
 }
 
+function dumpCssMap(cssMap) {
+	const allKeys = Object.keys(cssMap)
+	console.log('=============================================')
+	for (let key of allKeys) {
+		console.log(`${key} \t\t ${cssMap[key]}`)
+	}
+	console.log('=============================================')
+}
+
 function renderCss(options, cssClass) {
 	const tpl = path.join(__dirname, 'templates/icon.tpl')
 	const output = path.join(options.targetPath, 'icon.css')
@@ -48,6 +57,12 @@ function renderCss(options, cssClass) {
 		.replace(/{{mainContent}}/, cssClass.join('\n\n'))
 	fs.writeFileSync(output, content)
 	console.log('[step]', 'generate icon.css done.')
+}
+
+function renderCssNames(options, cssClass) {
+	const output = path.join(options.targetPath, 'icon-name.txt')
+	fs.writeFileSync(output, cssClass.join('\n\n'))
+	console.log('[step]', 'generate icon-name.txt done.')
 }
 
 function renderHtml(options, htmlPreview) {
@@ -101,6 +116,7 @@ class Packager {
 		const font = fontCarrier.create()
 		let cssContentList = []
 		let htmlContentList = []
+		let cssMap = {}
 
 		for (let file of files) {
 
@@ -110,6 +126,7 @@ class Packager {
 
 			let className = `${options.classPrefix}${path.basename(file, '.svg')}`
 
+			cssMap[className] = code.value16
 			cssContentList.push(`.${className}:before { content: "\\${code.value16}"; }`)
 			htmlContentList.push(`
 			<div class="item-wrapper">
@@ -121,6 +138,7 @@ class Packager {
 
 		return {
 			font,
+			cssMap, 
 			cssContentList,
 			htmlContentList
 		}
@@ -138,6 +156,7 @@ class Packager {
 
 		const {
 			font,
+			cssMap,
 			cssContentList,
 			htmlContentList
 		} = await this.createFontFromFiles(options, sortedFile)
@@ -146,7 +165,9 @@ class Packager {
 			path: path.join(options.targetPath, options.fontFileName)
 		})
 
+		dumpCssMap(cssMap)
 		renderCss(options, cssContentList)
+		renderCssNames(options, cssContentList)
 		renderHtml(options, htmlContentList)
 
 		console.log('[step]', 'transfer svg to font successfully.')
