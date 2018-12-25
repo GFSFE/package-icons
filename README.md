@@ -4,7 +4,7 @@ package-icons is a command line tool to package svg icons into font file with us
 
 ## 简介
 
-我们在开发的时候，UI大大会不停更新svg矢量图标，所以我们一次又一次地手动用 [panda](https://github.com/thunkli/panda) 这个工具来更新图标的字体库。来一个，更新一次；来两个，更新一双；来三个……擦！终于有一天，见勇怒了(不要问我见勇是谁)，总不能打UI大大（说不定也打不过……），于是就打（写）了这个小工具。    
+我们在开发的时候，UI大大会不停更新svg矢量图标，所以我们一次又一次地手动用 [panda](https://github.com/thunkli/panda) 这个工具来更新图标的字体库。来一个，更新一次；来两个，更新一双；来三个……擦！终于有一天，[见勇](https://github.com/Devil-Cong)怒了（不要问我[见勇](https://github.com/Devil-Cong)是谁），总不能打UI大大（说不定也打不过……），于是就打（写）了这个小工具。    
 
 **使用这个小工具，我们需要的东西有：**
 
@@ -19,7 +19,7 @@ package-icons is a command line tool to package svg icons into font file with us
 
 理论上，配合脚本，这些woff和css可以直接在项目中使用，显示漂亮的图标。    
 
-UI大大每次发过来一个svg的zip包，建涌微微一笑，运行脚本。    
+UI大大每次发过来一个svg的zip包，见勇微微一笑，运行脚本。    
 
 就这样，世界和平了……
 
