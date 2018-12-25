@@ -19,7 +19,7 @@ package-icons is a command line tool to package svg icons into font file with us
 
 理论上，配合脚本，这些woff和css可以直接在项目中使用，显示漂亮的图标。    
 
-UI大大每次发过来一个svg的zip包，见勇微微一笑，运行脚本。    
+UI大大每次发过来一个svg的zip包，[见勇](https://github.com/Devil-Cong)微微一笑，运行脚本。    
 
 就这样，世界和平了……
 
