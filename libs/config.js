@@ -13,5 +13,6 @@ module.exports = {
     fontFileName: 'font',
     startUnicode: 0XE000,
     classPrefix: 'icon-',
-    minifySvg: true
+    minifySvg: true,
+    unicodeName: false
 }

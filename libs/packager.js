@@ -88,7 +88,8 @@ class Packager {
 		fontFileName,
 		startUnicode,
 		classPrefix,
-		minifySvg
+		minifySvg,
+		unicodeName
 	}) {
 
 		this.options = {
@@ -98,14 +99,15 @@ class Packager {
 			fontFileName: fontFileName,
 			classPrefix: classPrefix,
 			minifySvg: minifySvg,
+			unicodeName: unicodeName
 		}
 
 		this.startCode = isNaN(parseInt(startUnicode)) ? parseInt(0XE000) : parseInt(startUnicode)
 	}
 
-	generateCode() {
+	generateCode(name) {
 		this.startCode++
-		const value16 = this.startCode.toString(16)
+		const value16 = this.options.unicodeName ? parseInt(name).toString(16) : this.startCode.toString(16)
 		return {
 			value16: value16,
 			unicode: `&#x${value16};`
@@ -114,7 +116,7 @@ class Packager {
 
 	async createFontFromFiles(options, files) {
 
-		const font = fontCarrier.create()
+		const font = fontCarrier.create({ id: options.fontName })
 		let cssContentList = []
 		let htmlContentList = []
 		let cssMap = {}
@@ -122,7 +124,7 @@ class Packager {
 		for (let file of files) {
 
 			let data = await getSvgFileData(file, options.minifySvg);
-			let code = this.generateCode()
+			let code = this.generateCode(path.basename(file, '.svg'))
 			font.setSvg(code.unicode, data)
 
 			let className = `${options.classPrefix}${path.basename(file, '.svg')}`
@@ -139,7 +141,7 @@ class Packager {
 
 		return {
 			font,
-			cssMap, 
+			cssMap,
 			cssContentList,
 			htmlContentList
 		}
