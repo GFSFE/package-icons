@@ -1,6 +1,6 @@
 {
   "name": "package-icons",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "command line tool to package svg icons into font file with useable css",
   "main": "index.js",
   "scripts": {
